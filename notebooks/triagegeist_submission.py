@@ -66,7 +66,11 @@ SEED = 42
 np.random.seed(SEED)
 
 # Paths — Kaggle or local
-if os.path.exists("/kaggle/input/triagegeist/"):
+if os.path.exists("/kaggle/input/datasets/adrininfantesromero/triagegeist-data/"):
+    DATA_PATH = "/kaggle/input/datasets/adrininfantesromero/triagegeist-data/"
+elif os.path.exists("/kaggle/input/triagegeist-data/"):
+    DATA_PATH = "/kaggle/input/triagegeist-data/"
+elif os.path.exists("/kaggle/input/triagegeist/"):
     DATA_PATH = "/kaggle/input/triagegeist/"
 else:
     DATA_PATH = "../data/"
